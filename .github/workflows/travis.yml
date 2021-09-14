@@ -1,0 +1,11 @@
+name: node_js
+on:
+   push:
+     branches: [master]
+   pull: 
+     branches: [master]
+jobs:
+   client: 
+      strategy: 
+         matrix:
+            os: bionic
