@@ -22,8 +22,11 @@ jobs:
          source .travis/before_install.sh
          npm ci
          source .travis/script.sh
+         sh ./migrate.sh
         env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          ENVIRONMENT_VARIABLE_NAME: ${{ secrets.ENVIRONMENT_VARIABLE_NAME }}
+     #   env:
+     #     VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
      #touch .env.production
      #echo VERCEL_TOKEN =${{ secrets.VERCEL_TOKEN }} > .env.production
 
