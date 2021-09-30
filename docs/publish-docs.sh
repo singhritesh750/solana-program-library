@@ -7,7 +7,7 @@ if [[ -d .vercel ]]; then
 fi
 
 CONFIG_FILE=vercel.json
-PROJECT_NAME=spl-solana-com
+PROJECT_NAME=solana-program-library
 
 PRODUCTION=
 if [[ -n "$CI" ]]; then
@@ -20,6 +20,8 @@ cat > "$CONFIG_FILE" <<EOF
   "scope": "singhritesh750"
 }
 EOF
+
+echo "VERCEL_TOKEN IS: $VERCEL_TOKEN"
 
 [[ -n $VERCEL_TOKEN ]] || {
   echo "VERCEL_TOKEN is undefined.  Needed for Vercel authentication."
