@@ -4,7 +4,6 @@ on:
     branches:  [master]
   pull_request:
     branches:  [master]
-
 jobs:
   build: 
     runs-on: ubuntu-latest
@@ -18,28 +17,12 @@ jobs:
       - run: .travis/affects.sh docs/ .travis || exit 0
         if: ${{ github.event_name == ('push' || 'pull_request')}} && ${{github.ref == 'master'}}
         name: "Build Docs"
-     # - run: |
-     #   yarn install
-     #     yarn upgrade docusaurus --latest
-     #   name: "updating the existing docusaurus"
       - run: |
          cd docs/
          source .travis/before_install.sh
          npm ci
          source .travis/script.sh
-     #  npm install
-     #  docusaurus-init
-         
-     #   cd ..
-         #npm ci
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        name: "running the before_install.sh"
-      #- run: |
-       #  cd docs/
-        # source .travis/script.sh
-        #name: "running the script.sh"
-#       - run: >
-#          cd docs/
-#          source .travis/script.sh
-#         name: "running the .travis/script.sh"
+        
+   
