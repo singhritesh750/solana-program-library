@@ -21,8 +21,11 @@ jobs:
          cd docs/
          source .travis/before_install.sh
          npm ci
-         touch .env.production
-         echo VERCEL_TOKEN =${{ secrets.VERCEL_TOKEN }} > .env.production
          source .travis/script.sh
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+     #touch .env.production
+     #echo VERCEL_TOKEN =${{ secrets.VERCEL_TOKEN }} > .env.production
+
          
    
