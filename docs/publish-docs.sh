@@ -21,7 +21,7 @@ cat > "$CONFIG_FILE" <<EOF
 }
 EOF
 
-VERCEL_TOKEN="4V4RI2LA8Y1ZrUaS2Q9tDMD3"
+# VERCEL_TOKEN="4V4RI2LA8Y1ZrUaS2Q9tDMD3"
 
 [[ -n $VERCEL_TOKEN ]] || {
   echo "VERCEL_TOKEN is undefined.  Needed for Vercel authentication."
