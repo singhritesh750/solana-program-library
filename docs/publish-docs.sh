@@ -17,7 +17,7 @@ fi
 cat > "$CONFIG_FILE" <<EOF
 {
   "name": "$PROJECT_NAME",
-  "scope": "joeaba"
+  "scope": "solana-labs"
 }
 EOF
 [[ -n $VERCEL_TOKEN ]] || {
