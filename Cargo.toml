@@ -1,4 +1,5 @@
 [workspace]
+
 members = [
   "associated-token-account/program",
   "binary-option/program",
