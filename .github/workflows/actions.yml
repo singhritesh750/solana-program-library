@@ -31,6 +31,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           environment: Preview 
           onlyRemoveDeployments: true
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
 
      #   env:
      #     VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
