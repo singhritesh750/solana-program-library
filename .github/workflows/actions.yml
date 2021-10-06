@@ -26,7 +26,7 @@ jobs:
         env:
           ENVIRONMENT_VARIABLE_NAME: ${{ secrets.ENVIRONMENT_VARIABLE_NAME }}
       - name: delete deployment
-      - uses: strumwolf/delete-deployment-environment@v2
+        uses: strumwolf/delete-deployment-environment@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           environment: Preview 
