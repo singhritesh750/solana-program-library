@@ -1,5 +1,4 @@
-
-# name : spl
+name : spl
 
 on:
   push:
