@@ -1,4 +1,6 @@
 
+name : spl
+
 on:
   push:
     branches:  [master]
